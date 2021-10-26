@@ -8,6 +8,7 @@
 * [Principiile OOP](#principiile-oop)
 * [Constructori și destructori](#constructori-și-destructori)
 * [Funcții friend](#funcții-friend)
+* [Probleme propuse](#probleme-propuse)
 
 ## Introducere
 *Bine ai venit la tutoriatul de Programare Orientată pe Obiecte!*
