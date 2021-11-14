@@ -4,7 +4,7 @@
 #include <string>
 
 class Produs {
-private:
+protected:
     std::string denumire;
     float pret;
 

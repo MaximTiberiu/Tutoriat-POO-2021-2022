@@ -17,6 +17,10 @@ public:
     Client(std::string _nume, char _id, float _suma_maxima);
     Client(std::string _nume, char _id, float _suma_maxima, std::string lista_cumparaturi); // lista_cumparaturi - cale catre fisierul .txt
 
+    void addProdus(const std::string & denumireProdus, float pretProdus, int numarProduse);
+    void deleteProdus(const std::string & denumireProdus, int numarProduse);
+    float totalPlata();
+
     void afisare();
 };
 

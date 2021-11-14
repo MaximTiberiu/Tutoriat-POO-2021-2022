@@ -3,4 +3,4 @@ project(p05)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(p05 main.cpp src/Produs.cpp headers/Produs.h src/Client.cpp headers/Client.h)
+add_executable(p05 main.cpp src/Produs.cpp headers/Produs.h src/Client.cpp headers/Client.h src/Casa.cpp src/Casa.h)
