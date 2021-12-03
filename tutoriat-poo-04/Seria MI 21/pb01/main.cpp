@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <typeindex>
 
 enum class Type {Persoana, Angajat, Student, Bugetar, Muncitor, StudentBursier};
 
@@ -9,7 +10,7 @@ protected:
 
 public:
     Persoana() = default;
-    ~Persoana() = default;
+    virtual ~Persoana() = default;
 
     Persoana(const std::string &_nume) {
         this->nume = _nume;
@@ -32,7 +33,7 @@ protected:
 
 public:
     Angajat() = default;
-    ~Angajat() = default;
+    ~Angajat() override = default;
 
     Angajat(const std::string &_nume, const std::string &_numeFirma, int _cui) : Persoana(_nume) {
         this->numeFirma = _numeFirma;
@@ -252,6 +253,34 @@ int main() {
 
     for (auto & persoana : persoane) {
         if (persoana->type() == Type::StudentBursier) {
+            persoana->printInfo();
+        }
+    }
+
+    std::cout << "VARIANTA 2 ---------------------\n";
+    for (auto & persoana : persoane) {
+        std::type_index typeIndex(typeid(*persoana));
+        if (typeIndex == std::type_index(typeid(Muncitor))) {
+            persoana->printInfo();
+        }
+    }
+
+    for (auto & persoana : persoane) {
+        std::type_index typeIndex(typeid(*persoana));
+        if (typeIndex == std::type_index(typeid(StudentBursier))) {
+            persoana->printInfo();
+        }
+    }
+
+    std::cout << "VARIANTA 3 ---------------------\n";
+    for (auto & persoana : persoane) {
+        if (dynamic_cast<Muncitor*>(persoana)) {
+            persoana->printInfo();
+        }
+    }
+
+    for (auto & persoana : persoane) {
+        if (dynamic_cast<StudentBursier*>(persoana)) {
             persoana->printInfo();
         }
     }
