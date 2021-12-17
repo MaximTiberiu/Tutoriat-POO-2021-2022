@@ -1,6 +1,8 @@
-#include <iostream>
+#include "Meniu.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Meniu *meniu = Meniu::getInstance();
+    meniu->adaugareCopii();
+    meniu->cautaCopil("Popa");
     return 0;
 }

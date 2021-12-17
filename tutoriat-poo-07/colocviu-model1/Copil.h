@@ -8,7 +8,7 @@
 class Copil {
 protected:
     static int s_idCopil;
-    const int idCopil{};
+    const int idCopil;
     std::string nume;
     std::string prenume;
     std::string adresa;
@@ -17,7 +17,7 @@ protected:
     std::vector<std::shared_ptr<Jucarie>> jucarii;
 
 public:
-    Copil() = default;
+    Copil();
     virtual ~Copil() = default;
 
     Copil(const std::string&, const std::string&, const std::string&, int, int, const std::vector<std::shared_ptr<Jucarie>>&);
@@ -30,6 +30,7 @@ public:
     virtual void read(std::istream&);
     virtual void print(std::ostream&) const;
 
+    const std::string &getNume() const;
 
 };
 
