@@ -3,4 +3,4 @@ project(model_01)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(model_01 main.cpp Jucarie.cpp Jucarie.h JucarieClasica.cpp JucarieClasica.h JucarieEducativa.cpp JucarieEducativa.h JucarieElectronica.cpp JucarieElectronica.h JucarieModerna.cpp JucarieModerna.h Copil.cpp Copil.h)
+add_executable(model_01 main.cpp Jucarie.cpp Jucarie.h JucarieClasica.cpp JucarieClasica.h JucarieEducativa.cpp JucarieEducativa.h JucarieElectronica.cpp JucarieElectronica.h JucarieModerna.cpp JucarieModerna.h Copil.cpp Copil.h CopilCuminte.cpp CopilCuminte.h CopilNeastamparat.cpp CopilNeastamparat.h Meniu.cpp Meniu.h)
